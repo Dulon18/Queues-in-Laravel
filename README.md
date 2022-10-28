@@ -8,3 +8,9 @@
 </p>
 
 
+## What is Laravel queue
+A queue involves placing things in order. For instance, a queue management system can be used to serve customers on a first-come-first-serve basis.
+
+This is no different from the Laravel queue. It serves the same job by ensuring that programs or services are executed in a certain order.
+
+For example, you have an application that requires users to sign up and then send them a One-Time-Password (OTP) or even a welcome email. Though this is a great implementation, it may slow down the application’s performance. Laravel queues can help salvage this situation.
