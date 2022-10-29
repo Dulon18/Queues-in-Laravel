@@ -8,7 +8,7 @@
 </p>
 
 
-## What is Laravel queue ?
+## What is Laravel Queue ?
 A queue involves placing things in order. For instance, a queue management system can be used to serve customers on a first-come-first-serve basis.
 
 This is no different from the Laravel queue. It serves the same job by ensuring that programs or services are executed in a certain order.
