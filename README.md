@@ -17,3 +17,7 @@ For example, you have an application that requires users to sign up and then sen
 
 
 Sending an email is a time-consuming task, so what we will do is we will create a job that’s the only task is to send an email to the user in the background. To create a Job, laravel provides a Queue API. So let’s understand that in detail.
+
+Laravel queues provide a unified API across various queue backends, such as Beanstalk, Amazon SQS, Redis, or even a relational database. As a result, queues allow you to defer processing a time-consuming task, such as sending an email. Delaying these time-consuming tasks drastically speeds up web requests to your application.
+
+The queue configuration file is stored in.config/queue.php In this file, you will find connection configurations for each queue driver included with the framework, consisting of a database, Beanstalkd, Amazon SQS, Redis, and synchronous driver that will execute jobs immediately (for local use). In addition, a null queue driver is also included, which discards queued jobs
