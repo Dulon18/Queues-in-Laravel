@@ -21,3 +21,11 @@ Sending an email is a time-consuming task, so what we will do is we will create 
 Laravel queues provide a unified API across various queue backends, such as Beanstalk, Amazon SQS, Redis, or even a relational database. As a result, queues allow you to defer processing a time-consuming task, such as sending an email. Delaying these time-consuming tasks drastically speeds up web requests to your application.
 
 The queue configuration file is stored in.config/queue.php In this file, you will find connection configurations for each queue driver included with the framework, consisting of a database, Beanstalkd, Amazon SQS, Redis, and synchronous driver that will execute jobs immediately (for local use). In addition, a null queue driver is also included, which discards queued jobs
+
+## Database
+
+In order to use the database queue driver, you will need a database table to hold the jobs. To generate a migration that creates this table, run the queue:table Artisan command. Once the migration has been created, you may migrate your database using the migrate command:
+
+php artisan queue:table
+ 
+php artisan migrate
