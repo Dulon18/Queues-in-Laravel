@@ -21,8 +21,10 @@ Sending an email is a time-consuming task, so what we will do is we will create 
 Laravel queues provide a unified API across various queue backends, such as Beanstalk, Amazon SQS, Redis, or even a relational database. As a result, queues allow you to defer processing a time-consuming task, such as sending an email. Delaying these time-consuming tasks drastically speeds up web requests to your application.
 
 The queue configuration file is stored in.config/queue.php In this file, you will find connection configurations for each queue driver included with the framework, consisting of a database, Beanstalkd, Amazon SQS, Redis, and synchronous driver that will execute jobs immediately (for local use). In addition, a null queue driver is also included, which discards queued jobs
-Queue Workers: How they work
-Updated: Sep 7, 2020 — 9 MIN READ — #queues
+
+
+## Queue Workers: How they work
+
 
 Let's perform a dive into how workers run your jobs. First I'd like to define workers as a simple PHP process that runs in the background with the purpose of extracting jobs from a storage space and run them with respect to several configuration options.
 
