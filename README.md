@@ -28,14 +28,16 @@ The queue configuration file is stored in.config/queue.php In this file, you wil
 
 Let's perform a dive into how workers run your jobs. First I'd like to define workers as a simple PHP process that runs in the background with the purpose of extracting jobs from a storage space and run them with respect to several configuration options.
 
-php artisan queue:work
+- php artisan queue:work
+
 Running this command will instruct Laravel to create an instance of your application and start executing jobs, this instance will stay alive indefinitely which means the action of starting your Laravel application happens only once when the command was run & the same instance will be used to execute your jobs, that means the following:
 
 You save server resources by avoiding booting up the whole app on every job.
 You have to manually restart the worker to reflect any code change you made in your application.
 You can also run:
 
-php artisan queue:work --once
+- php artisan queue:work --once
+
 This will start an instance of the application, process a single job, and then kill the script.
 
 php artisan queue:listen
